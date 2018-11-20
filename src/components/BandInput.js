@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 class BandInput extends Component {
 
   state = {
-    bandName: ''
+    bandName: '',
+    id: 0
   }
 
   handleOnChange(event) {
     this.setState({
       bandName: event.target.value,
+      id: this.state.id + 1
     });
   }
 
@@ -17,6 +19,7 @@ class BandInput extends Component {
     this.props.addBand(this.state.bandName);
     this.setState({
       bandName: '',
+      id: 0,
     });
   }
 
