@@ -7,7 +7,7 @@ class Band extends Component {
       <div>
         <li>{this.props.name}</li>
         <button onClick={() => props.delete(props.band.id)}>DELETE</button>
-    </div>
+
       </div>
     );
   }
